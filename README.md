@@ -118,9 +118,9 @@ The best way to explain this is to show its most obvious use-case: keyboard even
 <script>
   function render (event) {
     var content = event.target.value
-    content = content.replace('<', '&lt;')
+    content = content.replace('&', '&amp;')
                      .replace('>', '&gt;')
-                     .replace('&', '&amp;')
+                     .replace('<', '&lt;')
                      .replace('\n', '<br>')
     document.getElementById('output').innerHTML = content
   }

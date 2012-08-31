@@ -8,9 +8,9 @@
 <script>
   function render (event) {
     var content = event.target.value
-    content = content.replace('<', '&lt;')
+    content = content.replace('&', '&amp;')
                      .replace('>', '&gt;')
-                     .replace('&', '&amp;')
+                     .replace('<', '&lt;')
                      .replace('\n', '<br>')
     document.getElementById('output').innerHTML = content
   }
