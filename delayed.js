@@ -33,12 +33,12 @@
     , delayed = function (fn, seconds) {
         var args = slice(arguments, 2)
         return function () {
-          return delay.apply(null, fn, seconds, args.concat(slice(arguments)))
+          return delay.apply(null, [ fn, seconds ].concat(args).concat(slice(arguments)))
         }
       }
 
     , deferred = function (fn) {
-        return delayed.apply(null, [ deferSeconds ].apply(slice(arguments, 1)))
+        return delayed.apply(null, [ fn, deferSeconds ].concat(slice(arguments, 1)))
       }
 
     , noConflict = function () {
