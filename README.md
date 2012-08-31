@@ -4,6 +4,8 @@
 
 **Delayed** is designed for use across JavaScript platforms, including the browser and within Node.js. It conforms to CommonJS and AMD and can be included within an [Ender](http://ender.no.de) build. It is available in npm (for Node.js and Ender) as *"delayed"* or can be [downloaded](https://raw.github.com/rvagg/delayed/master/delayed.js) straight from GitHub repository.
 
+**Delayed** is tested against all modern browsers, plus Internet Explorer 6 and above.
+
 ## API
 
  * [delay()](#delay)
@@ -11,6 +13,7 @@
  * [delayed()](#delayed)
  * [deferred()](#deferred)
  * [cumulativeDelayed()](#cumulativeDelayed)
+ * [noConflict()](#noConflict)
 
 ---------------------------------------------
 
@@ -147,6 +150,12 @@ The new delaying function will return the timer reference from `setTimeout()` so
 ### noConflict()
 
 Changes the value of 'delayed' back to its original value and returns a reference to *delayed*.
+
+---------------------------------------------
+
+## Contributing
+
+I'm more than happy to consider contributions if they are roughly within the remit of the project. Bugfixes and suggestions for improveents are always welcome! Delayed uses [Buster](http://busterjs.org) for unit testing, simply run `npm install` from within the cloned registry to install Bufer. Tests can be run for Node.js with `npm test`, browsers can be pointed to *tests.html* to run the same suite.
 
 ## Licence & copyright
 
