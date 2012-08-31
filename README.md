@@ -50,7 +50,7 @@ D.delay(
 <a name="defer"></a>
 ### defer(fn)<br/>defer(fn, context)<br/>defer(fn, context, arg1, arg2...)
 
-*Available in an Ender build as `$.delay(fn, seconds...)`*
+*Available in an Ender build as `$.defer(fn, seconds...)`*
 
 `defer()` is essentially a shortcut for `delay(fn, 0.001...)`, which achieves a similar effect to `process.nextTick()` in Node.js or the proposed `setImmediate()` that we should start seeing in browsers soon (it exists in IE10). Use it to put off execution until the next time the browser/environment is ready to execute JavaScript. Given differences in timer resolutions across browsers, the exact timing will vary.
 
