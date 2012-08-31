@@ -4,11 +4,12 @@ if (typeof process != 'undefined' && typeof module != 'undefined' && typeof requ
   // Node
   delayed = 'success'
   delayed = require('./delayed')
-
   buster = require('buster')
 }
 
 D = delayed.noConflict()
+
+var expectedNullCtx = typeof window != 'undefined' ? window : null
 
 buster.testCase('Delayed', {
 
@@ -31,7 +32,7 @@ buster.testCase('Delayed', {
           setTimeout(function () {
             assert.equals(spy.callCount, 1)
             assert.equals(spy.firstCall.args.length, 0)
-            assert.isNull(spy.thisValues[0])
+            assert.same(spy.thisValues[0], expectedNullCtx)
             done()
           }, 110)
         }
@@ -77,7 +78,7 @@ buster.testCase('Delayed', {
           setTimeout(function () {
             assert.equals(spy.callCount, 1)
             assert.equals(spy.firstCall.args.length, 0)
-            assert.isNull(spy.thisValues[0])
+            assert.same(spy.thisValues[0], expectedNullCtx)
             done()
           }, 5)
         }
@@ -125,7 +126,7 @@ buster.testCase('Delayed', {
           setTimeout(function () {
             assert.equals(spy.callCount, 1)
             assert.equals(spy.firstCall.args.length, 0)
-            assert.isNull(spy.thisValues[0])
+            assert.same(spy.thisValues[0], expectedNullCtx)
             done()
           }, 110)
         }
@@ -182,7 +183,7 @@ buster.testCase('Delayed', {
           setTimeout(function () {
             assert.equals(spy.callCount, 1)
             assert.equals(spy.firstCall.args.length, 0)
-            assert.isNull(spy.thisValues[0])
+            assert.same(spy.thisValues[0], expectedNullCtx)
             done()
           }, 5)
         }
@@ -241,7 +242,7 @@ buster.testCase('Delayed', {
           setTimeout(function () {
             assert.equals(spy.callCount, 1)
             assert.equals(spy.firstCall.args.length, 0)
-            assert.isNull(spy.thisValues[0])
+            assert.same(spy.thisValues[0], expectedNullCtx)
             done()
           }, 110)
         }
