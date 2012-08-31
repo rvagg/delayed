@@ -1,7 +1,7 @@
 /*****************************************************************
   * Delayed: A collection of setTimeout-related function wranglers
   * Copyright (c) Rod Vagg (@rvagg) 2012
-  * https://github.com/rvagg/traversty
+  * https://github.com/rvagg/delayed
   * License: MIT
   */
 
