@@ -1,0 +1,26 @@
+{
+    "name": "delayed"
+  , "version": "0.0.0"
+  , "description": "A collection of setTimeout-related function wranglers"
+  , "main": "delayed.js"
+  , "scripts": {
+        "test": "node tests.js"
+    }
+  , "repository": {
+        "type": "git"
+      , "url": "git://github.com/rvagg/delayed.git"
+    }
+  , "keywords": [
+        "delay"
+      , "function"
+      , "setTimeout"
+      , "ender"
+    ]
+  , "authors": [
+       "Rod Vagg @rvagg <rod@vagg.org> (https://github.com/rvagg)"
+    ]
+  , "devDependencies": {
+        "buster": "*"
+    }
+  , "license": "MIT"
+}
