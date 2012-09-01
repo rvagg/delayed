@@ -32,15 +32,10 @@ var D = delayed // require('delayed') in Node.js or $ in Ender
 // print "beep" to the console after 1/2 a second
 D.delay(function () { console.log('beep') }, 0.5)
 
-// print "Hello world" after 5 seconds
-D.delay(
-    function (a, b) { console.log(this[a], this[b]) }
-  , 5                                  // timeout
-  , { 'foo': 'Hello', 'bar': 'world' } // context, or 'this'
-  , 'foo'                              // first argument
-  , 'bar'                              // second argument
-)
-
+function print (a, b) { console.log(this[a], this[b]) }
+D.delay(print, 5, { 'foo': 'Hello', 'bar': 'world' }, 'foo', 'bar')
+// after 5 seconds, `print` is executed with the 3rd argument as `this`
+// and the 4th and 5th as the arguments
 ```
 
 `delay()` returns the timer reference from `setTimeout()` so it's possible to retain it and call `clearTimeout(timer)` to cancel execution.
