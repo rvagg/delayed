@@ -95,7 +95,7 @@ The new delaying function will return the timer reference from `setTimeout()` so
 
 <a name="cumulativeDelayed"></a>
 ### cumulativeDelayed(fn, ms)<br/>cumulativeDelayed(fn, ms, context)<br/>cumulativeDelayed(fn, ms, context, arg1, arg2...)
-### debounce(fn, ms)<br/>cumulativeDelayed(fn, ms, context)<br/>debounce(fn, ms, context, arg1, arg2...)
+### debounce(fn, ms)<br/>debounce(fn, ms, context)<br/>debounce(fn, ms, context, arg1, arg2...)
 
 *Available in an Ender build as `$.cumulativeDelayed(fn, ms...)` and `debounce(fn, ms...)`*
 
