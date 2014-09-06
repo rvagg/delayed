@@ -98,7 +98,7 @@ The new delaying function will return the timer reference from `setTimeout()` so
 
 *Available in an Ender build as `$.cumulativeDelayed(fn, ms...)`*
 
-Returns a new function that will delay execution of the original functino for the specified number of milliseconds when called. Execution will be **further delayed** for the same number of milliseconds upon each subsequent call before execution occurs.
+Returns a new function that will delay execution of the original function for the specified number of milliseconds when called. Execution will be **further delayed** for the same number of milliseconds upon each subsequent call before execution occurs.
 
 The best way to explain this is to show its most obvious use-case: keyboard events in the browser.
 
