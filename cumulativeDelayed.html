@@ -15,7 +15,7 @@
     document.getElementById('output').innerHTML = content
   }
 
-  var delayedRender = delayed.cumulativeDelayed(render, 0.5)
+  var delayedRender = delayed.cumulativeDelayed(render, 500)
 
   document.getElementById('input').addEventListener('keyup', delayedRender)
 </script>
