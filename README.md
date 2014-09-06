@@ -13,7 +13,7 @@
  * [defer()](#defer)
  * [delayed()](#delayed)
  * [deferred()](#deferred)
- * [cumulativeDelayed()](#cumulativeDelayed)
+ * [cumulativeDelayed()](#cumulativeDelayed) *(a.k.a debounce())*
  * [noConflict()](#noConflict)
 
 ---------------------------------------------
@@ -95,8 +95,9 @@ The new delaying function will return the timer reference from `setTimeout()` so
 
 <a name="cumulativeDelayed"></a>
 ### cumulativeDelayed(fn, ms)<br/>cumulativeDelayed(fn, ms, context)<br/>cumulativeDelayed(fn, ms, context, arg1, arg2...)
+### debounce(fn, ms)<br/>cumulativeDelayed(fn, ms, context)<br/>debounce(fn, ms, context, arg1, arg2...)
 
-*Available in an Ender build as `$.cumulativeDelayed(fn, ms...)`*
+*Available in an Ender build as `$.cumulativeDelayed(fn, ms...)` and `debounce(fn, ms...)`*
 
 Returns a new function that will delay execution of the original function for the specified number of milliseconds when called. Execution will be **further delayed** for the same number of milliseconds upon each subsequent call before execution occurs.
 
