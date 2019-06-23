@@ -4,8 +4,7 @@
   "description": "A collection of setTimeout-related function wranglers",
   "main": "delayed.js",
   "scripts": {
-    "test": "node tests.js",
-    "build": "uglifyjs delayed.js > delayed.min.js"
+    "test": "node test.js"
   },
   "repository": {
     "type": "git",
@@ -15,14 +14,15 @@
     "delay",
     "function",
     "setTimeout",
-    "ender",
-    "cheesecake"
+    "setInterval",
+    "debounce",
+    "defer",
+    "timer"
   ],
   "author": "Rod <rod@vagg.org> (http://r.va.gg/)",
   "devDependencies": {
-    "sinon": "~1.10.3",
-    "tape": "~2.14.0",
-    "uglify-js": "~2.4.15"
+    "sinon": "~7.3.2",
+    "tape": "~4.10.2"
   },
   "license": "MIT"
 }
